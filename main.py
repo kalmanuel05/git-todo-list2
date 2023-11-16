@@ -26,6 +26,20 @@ def menu(todos):
     print("4. Delete a todo")
     print("5. Quit")
     choice = input("> ")
+    if choice == "1":
+      list_todos(todos)
+    elif choice == "2": 
+      add_todo(todos)
+    elif choice == "3": 
+      edit_todo(todos)
+    elif choice == "4": 
+      delete_todo(todos)
+    elif choice == "5": 
+      print("Bye!")
+      exit(0)
+    else: 
+      print("Ohh no! Invalid input.")
+    menu(todos)
 
 def main():
     print("Welcome to your todo list!")
